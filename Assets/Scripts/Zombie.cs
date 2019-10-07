@@ -36,7 +36,7 @@ public class Zombie : MonoBehaviour
             _isDead = true;
             _head.transform.SetParent(null);
             _headRigidbody = _head.gameObject.AddComponent<Rigidbody>();
-            _headRigidbody.AddForce(new Vector3(-6,10), ForceMode.Impulse);
+            _headRigidbody.AddForce(new Vector3(Random.Range(-6,-7),Random.Range(10,11)), ForceMode.Impulse);
             Destroy(_head.gameObject, 2f);
             Destroy(gameObject);
         }
